@@ -1,0 +1,98 @@
+{
+  "@id": "dtmi:digitaltwins:Basic:Store;1",
+  "@type": "Interface",
+  "@context": ["dtmi:dtdl:context;2"],
+  "displayName": "Ecommerce Store",
+  "description": "Ecommerce Store data",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "warehouseid",
+      "displayName": "warehouseid",
+      "description": "The unique id of the store shelfs and products",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "TimeInterval",
+      "description": "The time interval of this data",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfId",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "SlotOnShelf",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductId",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductName",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductCategory",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductQuantity",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductManufacturer",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductOfCustomer",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductImageURL",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "BatteryUsageTimeOfRobot (h)",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "RemainingBatteryOfRobot (%)",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "BatteryTravelDistanceOfRobot (km)",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductQuantityByRobot",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "RobotCarryingProductName",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "RobotCarryingProductQuantity",
+      "schema": "integer"
+    }
+  ]
+}
