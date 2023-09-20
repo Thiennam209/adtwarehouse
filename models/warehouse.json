@@ -1,15 +1,15 @@
 {
-  "@id": "dtmi:digitaltwins:Basic:Store;1",
+  "@id": "dtmi:digitaltwins:Basic:Warehouse;1",
   "@type": "Interface",
   "@context": ["dtmi:dtdl:context;2"],
-  "displayName": "Ecommerce Store",
-  "description": "Ecommerce Store data",
+  "displayName": "Ecommerce Warehouse",
+  "description": "Ecommerce Warehouse data",
   "contents": [
     {
       "@type": "Property",
       "name": "warehouseid",
       "displayName": "warehouseid",
-      "description": "The unique id of the store shelfs and products",
+      "description": "The unique id of the Warehouse shelfs and products",
       "writable": true,
       "schema": "string"
     },
