@@ -45,7 +45,8 @@ namespace My.Function
                     var ID = deviceMessage["body"]["warehouseid"];
                     var TimeInterval = deviceMessage["body"]["TimeInterval"];
                     var ShelfId = deviceMessage["body"]["ShelfId"];
-                    var SlotOnShelf = deviceMessage["body"]["SlotOnShelf"];
+                    var SlotQuantity = deviceMessage["body"]["SlotQuantity"];
+                    var ShelfProduct = deviceMessage["body"]["ShelfProduct"];
                     var ProductId = deviceMessage["body"]["ProductId"];
                     var ProductName = deviceMessage["body"]["ProductName"];
                     var ProductCategory = deviceMessage["body"]["ProductCategory"];
@@ -59,11 +60,13 @@ namespace My.Function
                     var ProductQuantityByRobot = deviceMessage["body"]["ProductQuantityByRobot"];
                     var RobotCarryingProductName = deviceMessage["body"]["RobotCarryingProductName"];
                     var RobotCarryingProductQuantity = deviceMessage["body"]["RobotCarryingProductQuantity"];
+                    var OrderFullilment = deviceMessage["body"]["OrderFullilment"];
 
 
                     log.LogInformation($"Device:{deviceId} Device Id is: {ID}");
                     log.LogInformation($"Device:{deviceId} Time interval is: {TimeInterval}");
-                    log.LogInformation($"Device:{deviceId} SlotOnShelf is: {SlotOnShelf}");
+                    log.LogInformation($"Device:{deviceId} SlotQuantity is: {SlotQuantity}");
+                    log.LogInformation($"Device:{deviceId} ShelfProduct is: {ShelfProduct}");
                     log.LogInformation($"Device:{deviceId} ShelfId is: {ShelfId}");
                     log.LogInformation($"Device:{deviceId} ProductId is: {ProductId}");
                     log.LogInformation($"Device: {deviceId} ProductName is: {ProductName}");
@@ -78,6 +81,7 @@ namespace My.Function
                     log.LogInformation($"Device: {deviceId} ProductQuantityByRobot is: {ProductQuantityByRobot}");
                     log.LogInformation($"Device: {deviceId} RobotCarryingProductName is: {RobotCarryingProductName}");
                     log.LogInformation($"Device: {deviceId} RobotCarryingProductQuantity is: {RobotCarryingProductQuantity}");
+                    log.LogInformation($"Device: {deviceId} OrderFullilment is: {OrderFullilment}");
 
                     var updateProperty = new JsonPatchDocument();
                     var turbineTelemetry = new Dictionary<string, Object>()
@@ -85,7 +89,8 @@ namespace My.Function
                         ["warehouseid"] = ID,
                         ["TimeInterval"] = TimeInterval,
                         ["ShelfId"] = ShelfId,
-                        ["SlotOnShelf"] = SlotOnShelf,
+                        ["SlotQuantity"] = SlotQuantity,
+                        ["ShelfProduct"] = ShelfProduct,
                         ["ProductId"] = ProductId,
                         ["ProductName"] = ProductName,
                         ["ProductCategory"] = ProductCategory,
@@ -97,7 +102,8 @@ namespace My.Function
                         ["BatteryTravelDistanceOfRobot"] = BatteryTravelDistanceOfRobot,
                         ["ProductQuantityByRobot"] = ProductQuantityByRobot,
                         ["RobotCarryingProductName"] = RobotCarryingProductName,
-                        ["RobotCarryingProductQuantity"] = RobotCarryingProductQuantity
+                        ["RobotCarryingProductQuantity"] = RobotCarryingProductQuantity,
+                        ["OrderFullilment"] = OrderFullilment
 
                     };
                     updateProperty.AppendAdd("/warehouseid", ID.Value<string>());

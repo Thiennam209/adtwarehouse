@@ -18,7 +18,8 @@ namespace SignalRFunctions
         public static string warehouseid;
         public static string TimeInterval;
         public static int ShelfId;
-        public static int SlotOnShelf;
+        public static int SlotQuantity;
+        public static string ShelfProduct;
         public static int ProductId;
         public static string ProductName;
         public static string ProductCategory;
@@ -32,6 +33,7 @@ namespace SignalRFunctions
         public static int ProductQuantityByRobot;
         public static string RobotCarryingProductName;
         public static int RobotCarryingProductQuantity;
+        public static int OrderFullilment;
 
 
         [FunctionName("negotiate")]

@@ -26,10 +26,10 @@ az config set extension.use_dynamic_install=yes_without_prompt
 az extension add --name azure-iot -y
 
 # echo 'retrieve files'
-git clone https://github.com/Thiennam209/adtwarehouse
+git clone https://github.com/Thiennam209/new-store-adt
 
 # echo 'input model'
-Warehouseid=$(az dt model create -n $adtname --models ./adtwarehouse/models/warehouse.json --query [].id -o tsv)
+Warehouseid=$(az dt model create -n $adtname --models ./new-store-adt/models/store.json --query [].id -o tsv)
 
 # echo 'instantiate ADT Instances'
 for i in {1..8}
@@ -47,4 +47,4 @@ az dt route create --dt-name $adtname --endpoint-name "$egname-ep" --route-name 
 az eventgrid event-subscription create --name "$egname-broadcast-sub" --source-resource-id $egid --endpoint "$funcappid/functions/broadcast" --endpoint-type azurefunction
 
 # Retrieve and Upload models to blob storage
-az storage blob upload-batch --account-name $storagename -d $containername -s "./adtwarehouse/assets"
+az storage blob upload-batch --account-name $storagename -d $containername -s "./new-store-adt/assets"

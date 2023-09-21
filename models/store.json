@@ -1,15 +1,15 @@
 {
-  "@id": "dtmi:digitaltwins:Basic:Warehouse;1",
+  "@id": "dtmi:digitaltwins:Basic:Store;1",
   "@type": "Interface",
   "@context": ["dtmi:dtdl:context;2"],
-  "displayName": "Ecommerce Warehouse",
-  "description": "Ecommerce Warehouse data",
+  "displayName": "Ecommerce Store",
+  "description": "Ecommerce Store data",
   "contents": [
     {
       "@type": "Property",
       "name": "warehouseid",
       "displayName": "warehouseid",
-      "description": "The unique id of the Warehouse shelfs and products",
+      "description": "The unique id of the store shelfs and products",
       "writable": true,
       "schema": "string"
     },
@@ -26,8 +26,13 @@
     },
     {
       "@type": "Telemetry",
-      "name": "SlotOnShelf",
+      "name": "SlotQuantity",
       "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfProduct",
+      "schema": "string"
     },
     {
       "@type": "Telemetry",
@@ -92,6 +97,11 @@
     {
       "@type": "Telemetry",
       "name": "RobotCarryingProductQuantity",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "OrderFullilment",
       "schema": "integer"
     }
   ]
