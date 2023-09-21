@@ -15,120 +15,120 @@
     },
     {
       "@type": "Property",
-      "name": "TimeInterval",
+      "name": "timeInterval",
       "description": "The time interval of this data",
-      "displayName": "TimeInterval",
+      "displayName": "timeInterval",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "ShelfId",
-      "displayName": "ShelfId",
+      "name": "shelfId",
+      "displayName": "shelfId",
       "writable": true,
       "schema": "integer"
     },
     {
       "@type": "Property",
-      "name": "SlotQuantity",
-      "displayName": "SlotQuantity",
+      "name": "slotQuantity",
+      "displayName": "slotQuantity",
       "writable": true,
       "schema": "integer"
     },
     {
       "@type": "Property",
-      "name": "ShelfProduct",
-      "displayName": "ShelfProduct",
+      "name": "shelfProduct",
+      "displayName": "shelfProduct",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "ProductId",
-      "displayName": "ProductId",
+      "name": "productId",
+      "displayName": "productId",
       "writable": true,
       "schema": "integer"
     },
     {
       "@type": "Property",
-      "name": "ProductName",
-      "displayName": "ProductName",
+      "name": "productName",
+      "displayName": "productName",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "ProductCategory",
-      "displayName": "ProductCategory",
+      "name": "productCategory",
+      "displayName": "productCategory",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "ProductManufacturer",
-      "displayName": "ProductManufacturer",
+      "name": "productManufacturer",
+      "displayName": "productManufacturer",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "ProductOfCustomer",
-      "displayName": "ProductOfCustomer",
+      "name": "productOfCustomer",
+      "displayName": "productOfCustomer",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "ProductImageURL",
-      "displayName": "ProductImageURL",
+      "name": "productImageURL",
+      "displayName": "productImageURL",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "BatteryUsageTimeOfRobot",
-      "displayName": "BatteryUsageTimeOfRobot",
+      "name": "batteryUsageTimeOfRobot",
+      "displayName": "batteryUsageTimeOfRobot",
       "writable": true,
       "schema": "integer"
     },
     {
       "@type": "Property",
-      "name": "RemainingBatteryOfRobot",
-      "displayName": "RemainingBatteryOfRobot",
+      "name": "remainingBatteryOfRobot",
+      "displayName": "remainingBatteryOfRobot",
       "writable": true,
       "schema": "integer"
     },
     {
       "@type": "Property",
-      "name": "BatteryTravelDistanceOfRobot",
-      "displayName": "BatteryTravelDistanceOfRobot",
+      "name": "batteryTravelDistanceOfRobot",
+      "displayName": "batteryTravelDistanceOfRobot",
       "writable": true,
       "schema": "integer"
     },
     {
       "@type": "Property",
-      "name": "ProductQuantity",
-      "displayName": "ProductQuantity",
+      "name": "productQuantity",
+      "displayName": "productQuantity",
       "writable": true,
       "schema": "integer"
     },
     {
       "@type": "Property",
-      "name": "RobotCarryingProductName",
-      "displayName": "RobotCarryingProductName",
+      "name": "robotCarryingProductName",
+      "displayName": "robotCarryingProductName",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "RobotCarryingProductQuantity",
-      "displayName": "RobotCarryingProductQuantity",
+      "name": "robotCarryingProductQuantity",
+      "displayName": "robotCarryingProductQuantity",
       "writable": true,
       "schema": "integer"
     },
     {
       "@type": "Property",
-      "name": "OrderFullillment",
+      "name": "orderFullillment",
       "displayName": "OrderFullillment",
       "writable": true,
       "schema": "integer"

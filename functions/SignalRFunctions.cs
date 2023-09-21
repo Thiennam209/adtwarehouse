@@ -16,25 +16,23 @@ namespace SignalRFunctions
     public static class SignalRFunctions
     {
         public static string warehouseid;
-        public static string TimeInterval;
-        public static int ShelfId;
-        public static int SlotQuantity;
-        public static string ShelfProduct;
-        public static int ProductId;
-        public static string ProductName;
-        public static string ProductCategory;
-        public static string ProductManufacturer;
-        public static string ProductOfCustomer;
-        public static string ProductImageURL;
-        public static int BatteryUsageTimeOfRobot;
-        public static int RemainingBatteryOfRobot;
-        public static int BatteryTravelDistanceOfRobot;
-        public static int ProductQuantity;
-        public static string RobotCarryingProductName;
-        public static int RobotCarryingProductQuantity;
-        public static int OrderFullillment;
-
-
+        public static string timeInterval;
+        public static int shelfId;
+        public static int slotQuantity;
+        public static string shelfProduct;
+        public static int productId;
+        public static string productName;
+        public static string productCategory;
+        public static string productManufacturer;
+        public static string productOfCustomer;
+        public static string productImageURL;
+        public static int batteryUsageTimeOfRobot;
+        public static int remainingBatteryOfRobot;
+        public static int batteryTravelDistanceOfRobot;
+        public static int productQuantity;
+        public static string robotCarryingProductName;
+        public static int robotCarryingProductQuantity;
+        public static int orderFullillment;
         [FunctionName("negotiate")]
         public static SignalRConnectionInfo GetSignalRInfo(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req,
@@ -42,7 +40,6 @@ namespace SignalRFunctions
         {
             return connectionInfo;
         }
-
         [FunctionName("broadcast")]
         public static Task SendMessage(
             [EventGridTrigger] EventGridEvent eventGridEvent,
@@ -53,7 +50,6 @@ namespace SignalRFunctions
             if (eventGridEvent.EventType.Contains("telemetry"))
             {
                 var data = eventGridData.SelectToken("data");
-
                 var telemetryMessage = new Dictionary<object, object>();
                 foreach (JProperty property in data.Children())
                 {
@@ -72,30 +68,28 @@ namespace SignalRFunctions
                 try
                 {
                     warehouseid = eventGridEvent.Subject;
-
                     var data = eventGridData.SelectToken("data");
                     var patch = data.SelectToken("patch");
-
                     var property = new Dictionary<object, object>
                     {
                         {"warehouseid", warehouseid },
-                        {"TimeInterval", TimeInterval },
-                        {"ShelfId", ShelfId },
-                        {"SlotQuantity", SlotQuantity },
-                        {"ShelfProduct", ShelfProduct },
-                        {"ProductId", ProductId },
-                        {"ProductName", ProductName },
-                        {"ProductCategory", ProductCategory },
-                        {"ProductManufacturer", ProductManufacturer },
-                        {"ProductOfCustomer", ProductOfCustomer },
-                        {"ProductImageURL", ProductImageURL },
-                        {"BatteryUsageTimeOfRobot", BatteryUsageTimeOfRobot },
-                        {"RemainingBatteryOfRobot", RemainingBatteryOfRobot },
-                        {"BatteryTravelDistanceOfRobot", BatteryTravelDistanceOfRobot },
-                        {"ProductQuantity", ProductQuantity },
-                        {"RobotCarryingProductName", RobotCarryingProductName },
-                        {"RobotCarryingProductQuantity", RobotCarryingProductQuantity },
-                        {"OrderFullillment", OrderFullillment }
+                        {"timeInterval", timeInterval },
+                        {"shelfId", shelfId },
+                        {"slotQuantity", slotQuantity },
+                        {"shelfProduct", shelfProduct },
+                        {"productId", productId },
+                        {"productName", productName },
+                        {"productCategory", productCategory },
+                        {"productManufacturer", productManufacturer },
+                        {"productOfCustomer", productOfCustomer },
+                        {"productImageURL", productImageURL },
+                        {"batteryUsageTimeOfRobot", batteryUsageTimeOfRobot },
+                        {"remainingBatteryOfRobot", remainingBatteryOfRobot },
+                        {"batteryTravelDistanceOfRobot", batteryTravelDistanceOfRobot },
+                        {"productQuantity", productQuantity },
+                        {"robotCarryingProductName", robotCarryingProductName },
+                        {"robotCarryingProductQuantity", robotCarryingProductQuantity },
+                        {"orderFullillment", orderFullillment }
                     };
                     return signalRMessages.AddAsync(
                         new SignalRMessage

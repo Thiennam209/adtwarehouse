@@ -37,12 +37,12 @@ do
     echo "Create Device warehouseid$i"
     az dt twin create -n $adtname --dtmi $warehouseid --twin-id "warehouseid$i"
     az dt twin update -n $adtname --twin-id "warehouseid$i" --json-patch '[{"op":"add", "path":"/warehouseid", "value": "'"warehouseid$i"'"},
-    {"op":"add", "path":"/TimeInterval", "value": ""},{"op":"add", "path":"/ShelfId", "value": 0},{"op":"add", "path":"/SlotQuantity", "value": 0},
-    {"op":"add", "path":"/ShelfProduct", "value": ""},{"op":"add", "path":"/ProductId", "value": 0},{"op":"add", "path":"/ProductName", "value": ""},
-    {"op":"add", "path":"/ProductCategory", "value": ""},{"op":"add", "path":"/ProductManufacturer", "value": ""},{"op":"add", "path":"/ProductOfCustomer", "value": ""},
-    {"op":"add", "path":"/ProductImageURL", "value": ""},{"op":"add", "path":"/BatteryUsageTimeOfRobot", "value": 0},{"op":"add", "path":"/RemainingBatteryOfRobot", "value": 0},
-    {"op":"add", "path":"/BatteryTravelDistanceOfRobot", "value": 0},{"op":"add", "path":"/ProductQuantity", "value": 0},{"op":"add", "path":"/RobotCarryingProductName", "value": ""},
-    {"op":"add", "path":"/RobotCarryingProductQuantity", "value": 0}, ,{"op":"add", "path":"/OrderFullillment", "value": 0}]'
+    {"op":"add", "path":"/timeInterval", "value": ""},{"op":"add", "path":"/shelfId", "value": 0},{"op":"add", "path":"/slotQuantity", "value": 0},
+    {"op":"add", "path":"/shelfProduct", "value": ""},{"op":"add", "path":"/productId", "value": 0},{"op":"add", "path":"/productName", "value": ""},
+    {"op":"add", "path":"/productCategory", "value": ""},{"op":"add", "path":"/productManufacturer", "value": ""},{"op":"add", "path":"/productOfCustomer", "value": ""},
+    {"op":"add", "path":"/productImageURL", "value": ""},{"op":"add", "path":"/batteryUsageTimeOfRobot", "value": 0},{"op":"add", "path":"/remainingBatteryOfRobot", "value": 0},
+    {"op":"add", "path":"/batteryTravelDistanceOfRobot", "value": 0},{"op":"add", "path":"/productQuantity", "value": 0},{"op":"add", "path":"/robotCarryingProductName", "value": ""},
+    {"op":"add", "path":"/robotCarryingProductQuantity", "value": 0}, ,{"op":"add", "path":"/orderFullillment", "value": 0}]'
 done
 
 # az eventgrid topic create -g $rgname --name $egname -l $location
