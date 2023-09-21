@@ -33,7 +33,7 @@ namespace SignalRFunctions
         public static int ProductQuantityByRobot;
         public static string RobotCarryingProductName;
         public static int RobotCarryingProductQuantity;
-        public static int OrderFullilment;
+        public static int OrderFullillment;
 
 
         [FunctionName("negotiate")]

@@ -60,7 +60,7 @@ namespace My.Function
                     var ProductQuantityByRobot = deviceMessage["body"]["ProductQuantityByRobot"];
                     var RobotCarryingProductName = deviceMessage["body"]["RobotCarryingProductName"];
                     var RobotCarryingProductQuantity = deviceMessage["body"]["RobotCarryingProductQuantity"];
-                    var OrderFullilment = deviceMessage["body"]["OrderFullilment"];
+                    var OrderFullillment = deviceMessage["body"]["OrderFullillment"];
 
 
                     log.LogInformation($"Device:{deviceId} Device Id is: {ID}");
@@ -81,7 +81,7 @@ namespace My.Function
                     log.LogInformation($"Device: {deviceId} ProductQuantityByRobot is: {ProductQuantityByRobot}");
                     log.LogInformation($"Device: {deviceId} RobotCarryingProductName is: {RobotCarryingProductName}");
                     log.LogInformation($"Device: {deviceId} RobotCarryingProductQuantity is: {RobotCarryingProductQuantity}");
-                    log.LogInformation($"Device: {deviceId} OrderFullilment is: {OrderFullilment}");
+                    log.LogInformation($"Device: {deviceId} OrderFullillment is: {OrderFullillment}");
 
                     var updateProperty = new JsonPatchDocument();
                     var turbineTelemetry = new Dictionary<string, Object>()
@@ -103,7 +103,7 @@ namespace My.Function
                         ["ProductQuantityByRobot"] = ProductQuantityByRobot,
                         ["RobotCarryingProductName"] = RobotCarryingProductName,
                         ["RobotCarryingProductQuantity"] = RobotCarryingProductQuantity,
-                        ["OrderFullilment"] = OrderFullilment
+                        ["OrderFullillment"] = OrderFullillment
 
                     };
                     updateProperty.AppendAdd("/warehouseid", ID.Value<string>());

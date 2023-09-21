@@ -342,7 +342,7 @@ resource PostDeploymentscript 'Microsoft.Resources/deploymentScripts@2020-10-01'
     forceUpdateTag: utcValue
     azCliVersion: '2.15.0'
     arguments: '${iot.name} ${adt.name} ${resourceGroup().name} ${location} ${eventGridChangeLogTopic.name} ${eventGridChangeLogTopic.id} ${funcApp.id} ${storage.name} ${fileContainerName}'
-    primaryScriptUri: 'https://raw.githubusercontent.com/Thiennam209/new-store-adt/main/postdeploy.sh'
+    primaryScriptUri: 'https://raw.githubusercontent.com/Thiennam209/adtwarehouse/main/postdeploy.sh'
     supportingScriptUris: []
     timeout: 'PT30M'
     cleanupPreference: 'OnExpiration'

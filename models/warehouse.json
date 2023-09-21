@@ -1,15 +1,15 @@
 {
-  "@id": "dtmi:digitaltwins:Basic:Store;1",
+  "@id": "dtmi:digitaltwins:Basic:Ưarehouse;1",
   "@type": "Interface",
   "@context": ["dtmi:dtdl:context;2"],
-  "displayName": "Ecommerce Store",
-  "description": "Ecommerce Store data",
+  "displayName": "Ecommerce Warehouse",
+  "description": "Ecommerce Warehouse data",
   "contents": [
     {
       "@type": "Property",
       "name": "warehouseid",
       "displayName": "warehouseid",
-      "description": "The unique id of the store shelfs and products",
+      "description": "The unique id of the Warehouse shelfs and products",
       "writable": true,
       "schema": "string"
     },
@@ -71,17 +71,17 @@
     },
     {
       "@type": "Telemetry",
-      "name": "BatteryUsageTimeOfRobot (h)",
+      "name": "BatteryUsageTimeOfRobot",
       "schema": "integer"
     },
     {
       "@type": "Telemetry",
-      "name": "RemainingBatteryOfRobot (%)",
+      "name": "RemainingBatteryOfRobot",
       "schema": "integer"
     },
     {
       "@type": "Telemetry",
-      "name": "BatteryTravelDistanceOfRobot (km)",
+      "name": "BatteryTravelDistanceOfRobot",
       "schema": "integer"
     },
     {
@@ -101,7 +101,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "OrderFullilment",
+      "name": "OrderFullillment",
       "schema": "integer"
     }
   ]
