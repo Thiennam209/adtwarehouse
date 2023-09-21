@@ -31,8 +31,8 @@ warehouseid=$(az dt model create -n $adtname --models ./adtwarehouse/models/ware
 # echo 'instantiate ADT Instances'
 
 for i in {1..8}; do
-    echo "Create Turbine warehouseid$i"
-    az dt twin create -n $adtname --dtmi $turbineid --twin-id "warehouseid$i"
+    echo "Create Warehouse warehouseid$i"
+    az dt twin create -n $adtname --dtmi $warehouseid --twin-id "warehouseid$i"
     az dt twin update -n $adtname --twin-id "warehouseid$i" --json-patch '[{"op":"add", "path":"/warehouseid", "value": "'"warehouseid$i"'"},
     {"op":"add", "path":"/timeInterval", "value": ""},{"op":"add", "path":"/shelfId", "value": 0},{"op":"add", "path":"/slotQuantity", "value": 0},
     {"op":"add", "path":"/shelfProduct", "value": ""},{"op":"add", "path":"/productId", "value": 0},{"op":"add", "path":"/productName", "value": ""},
