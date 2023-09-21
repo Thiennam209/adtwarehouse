@@ -41,21 +41,21 @@ namespace My.Function
                 var ID = deviceMessage["body"]["warehouseid"] != null ? deviceMessage["body"]["warehouseid"] : "";
                 var timeInterval = deviceMessage["body"]["timeInterval"] != null ? deviceMessage["body"]["timeInterval"] : "";
                 var shelfId = deviceMessage["body"]["shelfId"] != null ? deviceMessage["body"]["shelfId"] : "";
-                var slotQuantity = deviceMessage["body"]["slotQuantity"] != null ? deviceMessage["body"]["slotQuantity"] : 0;
+                var slotQuantity = deviceMessage["body"]["slotQuantity"] != null ? deviceMessage["body"]["slotQuantity"] : "'"0"'";
                 var shelfProduct = deviceMessage["body"]["shelfProduct"] != null ? deviceMessage["body"]["shelfProduct"] : "";
-                var productId = deviceMessage["body"]["productId"] != null ? deviceMessage["body"]["productId"] : 0;
+                var productId = deviceMessage["body"]["productId"] != null ? deviceMessage["body"]["productId"] : "'"0"'";
                 var productName = deviceMessage["body"]["productName"] != null ? deviceMessage["body"]["productName"] : "";
                 var productCategory = deviceMessage["body"]["productCategory"] != null ? deviceMessage["body"]["productCategory"] : "";
                 var productManufacturer = deviceMessage["body"]["productManufacturer"] != null ? deviceMessage["body"]["productManufacturer"] : "";
                 var productOfCustomer = deviceMessage["body"]["productOfCustomer"] != null ? deviceMessage["body"]["productOfCustomer"] : "";
                 var productImageURL = deviceMessage["body"]["productImageURL"] != null ? deviceMessage["body"]["productImageURL"] : "";
-                var batteryUsageTimeOfRobot = deviceMessage["body"]["batteryUsageTimeOfRobot"] != null ? deviceMessage["body"]["batteryUsageTimeOfRobot"] : 0;
-                var remainingBatteryOfRobot = deviceMessage["body"]["remainingBatteryOfRobot"] != null ? deviceMessage["body"]["remainingBatteryOfRobot"] : 0;
-                var batteryTravelDistanceOfRobot = deviceMessage["body"]["batteryTravelDistanceOfRobot"] != null ? deviceMessage["body"]["batteryTravelDistanceOfRobot"] : 0;
-                var productQuantity = deviceMessage["body"]["productQuantity"] != null ? deviceMessage["body"]["productQuantity"] : 0;
+                var batteryUsageTimeOfRobot = deviceMessage["body"]["batteryUsageTimeOfRobot"] != null ? deviceMessage["body"]["batteryUsageTimeOfRobot"] : "'"0"'";
+                var remainingBatteryOfRobot = deviceMessage["body"]["remainingBatteryOfRobot"] != null ? deviceMessage["body"]["remainingBatteryOfRobot"] : "'"0"'";
+                var batteryTravelDistanceOfRobot = deviceMessage["body"]["batteryTravelDistanceOfRobot"] != null ? deviceMessage["body"]["batteryTravelDistanceOfRobot"] : "'"0"'";
+                var productQuantity = deviceMessage["body"]["productQuantity"] != null ? deviceMessage["body"]["productQuantity"] : "'"0"'";
                 var robotCarryingProductName = deviceMessage["body"]["robotCarryingProductName"] != null ? deviceMessage["body"]["robotCarryingProductName"] : "";
-                var robotCarryingProductQuantity = deviceMessage["body"]["robotCarryingProductQuantity"] != null ? deviceMessage["body"]["robotCarryingProductQuantity"] : 0;
-                var orderFullillment = deviceMessage["body"]["orderFullillment"] != null ? deviceMessage["body"]["orderFullillment"] : 0;
+                var robotCarryingProductQuantity = deviceMessage["body"]["robotCarryingProductQuantity"] != null ? deviceMessage["body"]["robotCarryingProductQuantity"] : "'"0"'";
+                var orderFullillment = deviceMessage["body"]["orderFullillment"] != null ? deviceMessage["body"]["orderFullillment"] : "'"0"'";
                 log.LogInformation($"Device:{deviceId} Device Id is: {ID}");
                 log.LogInformation($"Device:{deviceId} Time interval is: {timeInterval}");
                 log.LogInformation($"Device:{deviceId} SlotQuantity is: {slotQuantity}");
@@ -96,6 +96,7 @@ namespace My.Function
                     ["robotCarryingProductQuantity"] = robotCarryingProductQuantity,
                     ["orderFullillment"] = orderFullillment
                 };
+                updateProperty.AppendReplace("/warehouseid", ID.Value<string>());
                 updateProperty.AppendReplace("/warehouseid", ID.Value<string>());
                 updateProperty.AppendReplace("/timeInterval", timeInterval.Value<string>());
                 updateProperty.AppendReplace("/shelfId", shelfId.Value<int>());
