@@ -23,14 +23,13 @@ namespace SignalRFunctions
         public static int ProductId;
         public static string ProductName;
         public static string ProductCategory;
-        public static int ProductQuantity;
         public static string ProductManufacturer;
         public static string ProductOfCustomer;
         public static string ProductImageURL;
         public static int BatteryUsageTimeOfRobot;
         public static int RemainingBatteryOfRobot;
         public static int BatteryTravelDistanceOfRobot;
-        public static int ProductQuantityByRobot;
+        public static int ProductQuantity;
         public static string RobotCarryingProductName;
         public static int RobotCarryingProductQuantity;
         public static int OrderFullillment;
@@ -79,7 +78,24 @@ namespace SignalRFunctions
 
                     var property = new Dictionary<object, object>
                     {
-                        {"warehouseid", warehouseid }
+                        {"warehouseid", warehouseid },
+                        {"TimeInterval", TimeInterval },
+                        {"ShelfId", ShelfId },
+                        {"SlotQuantity", SlotQuantity },
+                        {"ShelfProduct", ShelfProduct },
+                        {"ProductId", ProductId },
+                        {"ProductName", ProductName },
+                        {"ProductCategory", ProductCategory },
+                        {"ProductManufacturer", ProductManufacturer },
+                        {"ProductOfCustomer", ProductOfCustomer },
+                        {"ProductImageURL", ProductImageURL },
+                        {"BatteryUsageTimeOfRobot", BatteryUsageTimeOfRobot },
+                        {"RemainingBatteryOfRobot", RemainingBatteryOfRobot },
+                        {"BatteryTravelDistanceOfRobot", BatteryTravelDistanceOfRobot },
+                        {"ProductQuantity", ProductQuantity },
+                        {"RobotCarryingProductName", RobotCarryingProductName },
+                        {"RobotCarryingProductQuantity", RobotCarryingProductQuantity },
+                        {"OrderFullillment", OrderFullillment }
                     };
                     return signalRMessages.AddAsync(
                         new SignalRMessage
