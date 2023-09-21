@@ -32,8 +32,13 @@ warehouseid=$(az dt model create -n $adtname --models ./adtwarehouse/models/ware
 
 echo "Create Device warehouseid1"
 az dt twin create -n $adtname --dtmi $warehouseid --twin-id "warehouseid1"
-az dt twin update -n $adtname --twin-id "warehouseid1" --json-patch '[{"op":"add", "path":"/warehouseid", "value": "warehouseid1"}]'
-
+az dt twin update -n $adtname --twin-id "warehouseid1" --json-patch '[{"op":"add", "path":"/warehouseid", "value": "'"warehouseid1"'"},
+    {"op":"add", "path":"/timeInterval", "value": ""},{"op":"add", "path":"/shelfId", "value": 0},{"op":"add", "path":"/slotQuantity", "value": 0},
+    {"op":"add", "path":"/shelfProduct", "value": ""},{"op":"add", "path":"/productId", "value": 0},{"op":"add", "path":"/productName", "value": ""},
+    {"op":"add", "path":"/productCategory", "value": ""},{"op":"add", "path":"/productManufacturer", "value": ""},{"op":"add", "path":"/productOfCustomer", "value": ""},
+    {"op":"add", "path":"/productImageURL", "value": ""},{"op":"add", "path":"/batteryUsageTimeOfRobot", "value": 0},{"op":"add", "path":"/remainingBatteryOfRobot", "value": 0},
+    {"op":"add", "path":"/batteryTravelDistanceOfRobot", "value": 0},{"op":"add", "path":"/productQuantity", "value": 0},{"op":"add", "path":"/robotCarryingProductName", "value": ""},
+    {"op":"add", "path":"/robotCarryingProductQuantity", "value": 0},{"op":"add", "path":"/orderFullillment", "value": 0}]'
 
 echo "Create Device warehouseid2"
 az dt twin create -n $adtname --dtmi $warehouseid --twin-id "warehouseid2"
