@@ -191,7 +191,7 @@ resource appInsights 'Microsoft.Insights/components@2015-05-01' = {
 resource ingestfunction 'Microsoft.Web/sites/extensions@2015-08-01' = {
   name: '${funcApp.name}/MSDeploy'
   properties: {
-packageUri: 'https://cdn.glitch.global/749e2e85-0cea-4e1a-8f92-0db2d30224de/blade-functions-car.zip'
+packageUri: 'https://cdn.glitch.global/749e2e85-0cea-4e1a-8f92-0db2d30224de/adtwarehouse_function.zip'
 dbType: 'None'
     connectionString: ''
   }
@@ -341,7 +341,7 @@ resource PostDeploymentscript 'Microsoft.Resources/deploymentScripts@2020-10-01'
     forceUpdateTag: utcValue
     azCliVersion: '2.15.0'
     arguments: '${iot.name} ${adt.name} ${resourceGroup().name} ${location} ${eventGridChangeLogTopic.name} ${eventGridChangeLogTopic.id} ${funcApp.id} ${storage.name} ${fileContainerName}'
-    primaryScriptUri: 'https://raw.githubusercontent.com/Thiennam209/adt-iot-car/main/postdeploy.sh'
+    primaryScriptUri: 'https://raw.githubusercontent.com/Thiennam209/adtwarehouse/main/postdeploy.sh'
     supportingScriptUris: []
     timeout: 'PT30M'
     cleanupPreference: 'OnExpiration'
