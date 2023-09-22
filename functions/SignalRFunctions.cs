@@ -15,24 +15,18 @@ namespace SignalRFunctions
 {
     public static class SignalRFunctions
     {
-        public static string warehouseid;
-        public static string timeInterval;
-        public static int shelfId;
-        public static int slotQuantity;
-        public static string shelfProduct;
-        public static int productId;
-        public static string productName;
-        public static string productCategory;
-        public static string productManufacturer;
-        public static string productOfCustomer;
-        public static string productImageURL;
-        public static int batteryUsageTimeOfRobot;
-        public static int remainingBatteryOfRobot;
-        public static int batteryTravelDistanceOfRobot;
-        public static int productQuantity;
-        public static string robotCarryingProductName;
-        public static int robotCarryingProductQuantity;
-        public static int orderFullillment;
+        public static string deviceid;
+        public static double oxys;
+        public static double ats;
+        public static double pressure;
+        public static double cps;
+        public static double aps;
+        public static double sas;
+        public static double vss;
+        public static double iat;
+        public static double maf;
+        public static double ect;
+
         [FunctionName("negotiate")]
         public static SignalRConnectionInfo GetSignalRInfo(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req,
@@ -40,6 +34,7 @@ namespace SignalRFunctions
         {
             return connectionInfo;
         }
+
         [FunctionName("broadcast")]
         public static Task SendMessage(
             [EventGridTrigger] EventGridEvent eventGridEvent,
@@ -50,6 +45,7 @@ namespace SignalRFunctions
             if (eventGridEvent.EventType.Contains("telemetry"))
             {
                 var data = eventGridData.SelectToken("data");
+
                 var telemetryMessage = new Dictionary<object, object>();
                 foreach (JProperty property in data.Children())
                 {
@@ -67,29 +63,23 @@ namespace SignalRFunctions
             {
                 try
                 {
-                    warehouseid = eventGridEvent.Subject;
+                    deviceid = eventGridEvent.Subject;
+                    
                     var data = eventGridData.SelectToken("data");
                     var patch = data.SelectToken("patch");
                     var property = new Dictionary<object, object>
                     {
-                        {"warehouseid", warehouseid },
-                        {"timeInterval", timeInterval },
-                        {"shelfId", shelfId },
-                        {"slotQuantity", slotQuantity },
-                        {"shelfProduct", shelfProduct },
-                        {"productId", productId },
-                        {"productName", productName },
-                        {"productCategory", productCategory },
-                        {"productManufacturer", productManufacturer },
-                        {"productOfCustomer", productOfCustomer },
-                        {"productImageURL", productImageURL },
-                        {"batteryUsageTimeOfRobot", batteryUsageTimeOfRobot },
-                        {"remainingBatteryOfRobot", remainingBatteryOfRobot },
-                        {"batteryTravelDistanceOfRobot", batteryTravelDistanceOfRobot },
-                        {"productQuantity", productQuantity },
-                        {"robotCarryingProductName", robotCarryingProductName },
-                        {"robotCarryingProductQuantity", robotCarryingProductQuantity },
-                        {"orderFullillment", orderFullillment }
+                        {"deviceid", deviceid },
+                        {"oxys", oxys },
+                        {"ats", ats },
+                        {"pressure", pressure },
+                        {"cps", cps },
+                        {"aps", aps },
+                        {"sas", sas },
+                        {"vss", vss },
+                        {"iat", iat },
+                        {"maf", maf },
+                        {"ect", ect }
                     };
                     return signalRMessages.AddAsync(
                         new SignalRMessage
