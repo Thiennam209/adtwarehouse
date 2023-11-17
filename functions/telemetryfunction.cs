@@ -26,10 +26,6 @@ namespace My.Function
         {
             try
             {
-                // After this is deployed, you need to turn the Managed Identity Status to "On",
-                // Grab Object Id of the function and assigned "Azure Digital Twins Owner (Preview)" role
-                // to this function identity in order for this function to be authorized on ADT APIs.
-                //Authenticate with Digital Twins
                 var credentials = new DefaultAzureCredential();
                 log.LogInformation(credentials.ToString());
                 DigitalTwinsClient client = new DigitalTwinsClient(
@@ -96,7 +92,6 @@ namespace My.Function
                     ["robotCarryingProductQuantity"] = robotCarryingProductQuantity,
                     ["orderFullillment"] = orderFullillment
                 };
-                updateProperty.AppendReplace("/warehouseid", ID.Value<string>());
                 updateProperty.AppendReplace("/warehouseid", ID.Value<string>());
                 updateProperty.AppendReplace("/timeInterval", timeInterval.Value<string>());
                 updateProperty.AppendReplace("/shelfId", shelfId.Value<int>());
