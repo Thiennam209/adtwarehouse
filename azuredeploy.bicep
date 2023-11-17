@@ -121,7 +121,6 @@ resource appserver 'Microsoft.Web/serverfarms@2019-08-01' = {
     name: 'B1'
   }
 }
-
 // create Function app for hosting the IoTHub ingress and SignalR egress
 resource funcApp 'Microsoft.Web/sites@2019-08-01' = {
   name: funcAppName

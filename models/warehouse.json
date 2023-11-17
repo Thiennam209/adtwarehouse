@@ -23,115 +23,290 @@
     },
     {
       "@type": "Property",
-      "name": "shelfId",
-      "displayName": "shelfId",
+      "name": "shelfId1",
+      "displayName": "shelfId1",
       "writable": true,
-      "schema": "integer"
+      "schema": "double"
     },
     {
       "@type": "Property",
-      "name": "slotQuantity",
-      "displayName": "slotQuantity",
+      "name": "shelfId2",
+      "displayName": "shelfId2",
       "writable": true,
-      "schema": "integer"
+      "schema": "double"
     },
     {
       "@type": "Property",
-      "name": "shelfProduct",
-      "displayName": "shelfProduct",
+      "name": "slotQuantity1",
+      "displayName": "slotQuantity1",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "slotQuantity2",
+      "displayName": "slotQuantity2",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "shelfProduct1",
+      "displayName": "shelfProduct1",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "productId",
-      "displayName": "productId",
-      "writable": true,
-      "schema": "integer"
-    },
-    {
-      "@type": "Property",
-      "name": "productName",
-      "displayName": "productName",
+      "name": "shelfProduct2",
+      "displayName": "shelfProduct2",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "productCategory",
-      "displayName": "productCategory",
+      "name": "productId1",
+      "displayName": "productId1",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "productId2",
+      "displayName": "productId2",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "productId3",
+      "displayName": "productId3",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "productId4",
+      "displayName": "productId4",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "productName1",
+      "displayName": "productName1",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "productManufacturer",
-      "displayName": "productManufacturer",
+      "name": "productName2",
+      "displayName": "productName2",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "productOfCustomer",
-      "displayName": "productOfCustomer",
+      "name": "productName3",
+      "displayName": "productName3",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "productImageURL",
-      "displayName": "productImageURL",
+      "name": "productName4",
+      "displayName": "productName4",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "batteryUsageTimeOfRobot",
-      "displayName": "batteryUsageTimeOfRobot",
-      "writable": true,
-      "schema": "integer"
-    },
-    {
-      "@type": "Property",
-      "name": "remainingBatteryOfRobot",
-      "displayName": "remainingBatteryOfRobot",
-      "writable": true,
-      "schema": "integer"
-    },
-    {
-      "@type": "Property",
-      "name": "batteryTravelDistanceOfRobot",
-      "displayName": "batteryTravelDistanceOfRobot",
-      "writable": true,
-      "schema": "integer"
-    },
-    {
-      "@type": "Property",
-      "name": "productQuantity",
-      "displayName": "productQuantity",
-      "writable": true,
-      "schema": "integer"
-    },
-    {
-      "@type": "Property",
-      "name": "robotCarryingProductName",
-      "displayName": "robotCarryingProductName",
+      "name": "productCategory1",
+      "displayName": "productCategory1",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "robotCarryingProductQuantity",
-      "displayName": "robotCarryingProductQuantity",
+      "name": "productCategory2",
+      "displayName": "productCategory2",
       "writable": true,
-      "schema": "integer"
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "productCategory3",
+      "displayName": "productCategory3",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "productCategory4",
+      "displayName": "productCategory4",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "productManufacturer1",
+      "displayName": "productManufacturer1",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "productManufacturer2",
+      "displayName": "productManufacturer2",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "productManufacturer3",
+      "displayName": "productManufacturer3",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "productManufacturer4",
+      "displayName": "productManufacturer4",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "productOfCustomer1",
+      "displayName": "productOfCustomer1",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "productOfCustomer2",
+      "displayName": "productOfCustomer2",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "productOfCustomer3",
+      "displayName": "productOfCustomer3",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "productOfCustomer4",
+      "displayName": "productOfCustomer4",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "batteryUsageTimeOfRobot1",
+      "displayName": "batteryUsageTimeOfRobot1",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "batteryUsageTimeOfRobot2",
+      "displayName": "batteryUsageTimeOfRobot2",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "remainingBatteryOfRobot1",
+      "displayName": "remainingBatteryOfRobot1",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "remainingBatteryOfRobot2",
+      "displayName": "remainingBatteryOfRobot2",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "batteryTravelDistanceOfRobot1",
+      "displayName": "batteryTravelDistanceOfRobot1",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "batteryTravelDistanceOfRobot2",
+      "displayName": "batteryTravelDistanceOfRobot2",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "productQuantity1",
+      "displayName": "productQuantity1",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "productQuantity2",
+      "displayName": "productQuantity2",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "productQuantity3",
+      "displayName": "productQuantity3",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "productQuantity4",
+      "displayName": "productQuantity4",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "robotCarryingProductName1",
+      "displayName": "robotCarryingProductName1",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "robotCarryingProductName2",
+      "displayName": "robotCarryingProductName2",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "robotCarryingProductQuantity1",
+      "displayName": "robotCarryingProductQuantity1",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "robotCarryingProductQuantity2",
+      "displayName": "robotCarryingProductQuantity2",
+      "writable": true,
+      "schema": "double"
     },
     {
       "@type": "Property",
       "name": "orderFullillment",
       "displayName": "orderFullillment",
       "writable": true,
-      "schema": "integer"
+      "schema": "double"
     }
   ]
 }
